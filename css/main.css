@@ -1,0 +1,12 @@
+:focus{
+	outline: 0!important;
+}
+
+.ctrl-label{
+	height:  28px;
+	line-height: 28px;
+}
+
+.row-fluid .ctrl-label{
+	width: 70px;
+}

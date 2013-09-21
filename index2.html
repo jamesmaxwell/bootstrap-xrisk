@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Bootstrap 101 Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+    <h1>Hello, world!</h1>
+	<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span4">
+			<p class="text-center text-warning">Nullam quis risus eget urna mollis ornare vel eu leo. <small>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</small> Nullam id dolor id nibh ultricies vehicula.</p>
+			<p class="lead muted">Cum sociis natoque <em>penatibus et magnis dis</em> parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+			<p class="text-info">Maecenas sed diam <abbr title="eget abbr">eget</abbr> risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+		</div>
+		<div class="span7 offset1">
+			<address>
+				<strong>Honghe Wood</strong><br/>
+				938 street<br/>
+				San Francisco<br/>
+				phone: 99393
+			</address>
+			<blockquote>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				<small>Someone famous <cite title="Source Title">Source Title</cite></small>
+			</blockquote>
+		</div>
+	</div>
+	</div>
+	<hr/>
+	<div class="container">
+		<div class="row">
+			<div class="span6">
+				<dl>
+					<dt>Description list</dt>
+					<dd>A description list is perfect for defining terms.</dd>
+				</dl>
+				<p> for example <code>&lt;section&gt;</code> should be wrapped as inline</p>
+				<pre>
+public void Main(string[] args){
+	Console.WriteLine("hello world!");
+}
+				</pre>
+			</div>
+			<div class="span6">
+				<table class="table table-striped table-bordered table-hover table-condensed">
+					<caption>table example</caption>
+					<thead>
+						<tr class="info"><th>#</th><th>First Name</th><th>Last Name</th></tr>
+					</thead>
+					<tbody>
+					<tr class="error"><td>1</td><td>James</td><td>Maxwell</td></tr>
+					<tr class="success"><td>2</td><td>Alice</td><td>Jonhs</td></tr>
+					<tr><td>3</td><td>Clerk</td><td>Kobe</td></tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<div class="container">
+		<div class="row">
+			<div class="span6">
+				<form>
+					<fieldset>
+						<legend>Legend</legend>
+						<label>UserName:</label>
+						<input type="text" class="span2" placeholder="input user name"/>
+						<input class="input-xlarge invalid" id="focusedInput" type="text" placeholder="This is focused..." required>
+						
+						<div class="input-prepend">
+						  <span class="add-on">@</span>
+						  <input class="span2" id="prependedInput" type="text" placeholder="Username">
+						</div>
+						<span class="help-block">help text here</span>
+						<label>Age:</label>
+						<select>
+						  <option>1</option>
+						  <option>2</option>
+						  <option>3</option>
+						  <option>4</option>
+						  <option>5</option>
+						</select>
+						<label class="checkbox">
+							<input type="checkbox"> check me out
+						</label>
+						<label>prepend append</label>
+						<div class="input-prepend input-append">
+						  <span class="add-on">$</span>
+						  <input class="span2" id="appendedPrependedInput" type="text">
+						  <span class="add-on">.00</span>
+						</div>
+						<label>go</label>
+						<div class="input-append">
+						  <input class="span2" id="appendedInputButton" type="text">
+						  <button class="btn" type="button">Go!</button>
+						</div>
+						<label>action</label>
+						<div class="input-append">
+						  <input class="span2" id="appendedDropdownButton" type="text">
+						  <div class="btn-group">
+							<button class="btn dropdown-toggle" data-toggle="dropdown">
+							  Action
+							  <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu">
+							  <li><a href="#">action1<i class="icon-search"></i></a></li>
+							  <li><a href="#">action2</a></li>
+							  <li class="divider"/>
+							  <li><a href="#">action3</a></li>
+							</ul>
+						  </div>
+						</div>
+						<span class="input-xlarge uneditable-input">Some value here</span>
+						<label>
+						<button type="submit" class="btn  btn-primary">Submit</button>
+						</label>
+					</fieldset>
+				</form>
+			</div>
+			<div class="span6">
+			<form class="form-inline">
+			  <input type="text" class="input-small" placeholder="Email">
+			  <input type="password" class="input-small" placeholder="Password">
+			  <label class="checkbox">
+				<input type="checkbox"> Remember me
+			  </label>
+			  <button type="submit" class="btn">Sign in</button>
+			</form>
+			<form class="form-search">
+			  <input type="text" class="input-medium search-query">
+			  <button type="submit" class="btn">Search</button>
+			</form>
+			<form class="form-horizontal">
+			  <div class="control-group">
+				<label class="control-label" for="inputEmail">Email</label>
+				<div class="controls">
+				  <input type="text" id="inputEmail" placeholder="Email">
+				</div>
+			  </div>
+			  <div class="control-group">
+				<label class="control-label" for="inputPassword">Password</label>
+				<div class="controls">
+				  <input type="password" id="inputPassword" placeholder="Password">
+				</div>
+			  </div>
+			  <div class="control-group">
+				<div class="controls">
+				  <label class="checkbox">
+					<input type="checkbox"> Remember me
+				  </label>
+				  <select multiple="multiple">
+					  <option>1</option>
+					  <option>2</option>
+					  <option>3</option>
+					  <option>4</option>
+					  <option>5</option>
+					</select>
+				  <button type="submit" class="btn">Sign in</button>
+				</div>
+			  </div>
+			</form>
+			</div>
+		</div>
+	</div>
+	<hr/>
+	<div class="container">
+	<div class="row">
+		<div class="span9">
+			<div class="row">
+				<div class="span3">
+					<ul class="inline">
+						<li>list 1</li>
+						<li>
+							<ul class="unstyled">
+								<li> inner list 1</li>
+								<li> inner list 2</li>
+							</ul>
+						</li>
+						<li>list 3</li>
+						<li>list 4</li>
+					</ul>
+				</div>
+				<div class="span3">
+					<ol>
+						<li>order list1</li>
+						<li>order list2</li>
+					</ol>					
+				</div>
+				<div class="span3">
+					<div class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#ax">DropDown<b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">item1</a></li>
+							<li><a href="#">item2</a></li>
+							<li><a href="#">item3</a></li>
+							<li><a href="#">item4</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+	<a href="http://www.google.com/">google</a>
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
