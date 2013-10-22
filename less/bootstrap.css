@@ -3400,7 +3400,6 @@ input[type="submit"].btn.btn-mini {
 .nav > li > a:focus {
   text-decoration: none;
   background-color: #d8d8d8;
-  border: 1px solid #888888;
 }
 .nav > li > a > img {
   max-width: none;
