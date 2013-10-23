@@ -119,7 +119,6 @@
 
 // Give the tabs something to sit on
 .nav-tabs {
-  border-bottom: 1px solid #a8a8a8;
 }
 // Make the list-items overlay the bottom border
 .nav-tabs > li {
@@ -302,9 +301,7 @@
 .tab-content {
   overflow: auto; // prevent content from running below tabs
   padding: 0;
-  border-left: 1px solid @black;
-  border-right: 1px solid @black;
-  border-bottom: 1px solid @black;
+  border: 1px solid @tabBorderColor;
 }
 
 // Remove border on bottom, left, right
@@ -330,24 +327,16 @@
 // ------
 
 .tabs-below > .nav-tabs {
-  border-top: 1px solid #ddd;
+  margin-top: 0;
 }
 .tabs-below > .nav-tabs > li {
   margin-top: -1px;
   margin-bottom: 0;
 }
-.tabs-below > .nav-tabs > li > a {
-  .border-radius(0 0 4px 4px);
-  &:hover,
-  &:focus {
-    border-bottom-color: transparent;
-    border-top-color: #ddd;
-  }
-}
 .tabs-below > .nav-tabs > .active > a,
 .tabs-below > .nav-tabs > .active > a:hover,
 .tabs-below > .nav-tabs > .active > a:focus {
-  border-color: transparent #ddd #ddd #ddd;
+  border-color: transparent @tabBorderColor @tabBorderColor @tabBorderColor;
 }
 
 // LEFT & RIGHT
@@ -368,42 +357,32 @@
 // Tabs on the left
 .tabs-left > .nav-tabs {
   float: left;
-  margin-right: 19px;
-  border-right: 1px solid #ddd;
+  margin-right: 0;
+  margin-top: 0;
 }
 .tabs-left > .nav-tabs > li > a {
   margin-right: -1px;
-  .border-radius(4px 0 0 4px);
-}
-.tabs-left > .nav-tabs > li > a:hover,
-.tabs-left > .nav-tabs > li > a:focus {
-  border-color: @grayLighter #ddd @grayLighter @grayLighter;
 }
 .tabs-left > .nav-tabs .active > a,
 .tabs-left > .nav-tabs .active > a:hover,
 .tabs-left > .nav-tabs .active > a:focus {
-  border-color: #ddd transparent #ddd #ddd;
+  border-color: @tabBorderColor transparent @tabBorderColor @tabBorderColor;
   *border-right-color: @white;
 }
 
 // Tabs on the right
 .tabs-right > .nav-tabs {
   float: right;
-  margin-left: 19px;
-  border-left: 1px solid #ddd;
+  margin-left: 0;
+  margin-top: 0;
 }
 .tabs-right > .nav-tabs > li > a {
   margin-left: -1px;
-  .border-radius(0 4px 4px 0);
-}
-.tabs-right > .nav-tabs > li > a:hover,
-.tabs-right > .nav-tabs > li > a:focus {
-  border-color: @grayLighter @grayLighter @grayLighter #ddd;
 }
 .tabs-right > .nav-tabs .active > a,
 .tabs-right > .nav-tabs .active > a:hover,
 .tabs-right > .nav-tabs .active > a:focus {
-  border-color: #ddd #ddd #ddd transparent;
+  border-color:@tabBorderColor @tabBorderColor @tabBorderColor transparent;
   *border-left-color: @white;
 }
 
