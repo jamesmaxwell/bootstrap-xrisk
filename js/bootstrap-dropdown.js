@@ -45,13 +45,15 @@
         , $dropdown
         , maxHeight
         , propWidth
+        , $preInput
 
       if ($this.is('.disabled, :disabled')) return
 
       $parent = getParent($this)
       $dropdown = $parent.find('.dropdown-menu');
       maxHeight = $dropdown.attr('max-height') || 200;
-      propWidth = $this.position().left + $this.width();
+      propWidth = $this.position().left + $this.outerWidth();
+      $preInput = $parent.parent().find('input');
 
       isActive = $parent.hasClass('open')
 
@@ -62,7 +64,11 @@
           // if mobile we we use a backdrop because click events don't delegate
           $('<div class="dropdown-backdrop"/>').insertBefore($(this)).on('click', clearMenus)
         }
-        $parent.toggleClass('open')
+        $parent.toggleClass('open');
+        if($preInput.size() > 0){
+          propWidth += $preInput.outerWidth();
+          $dropdown.css({left: -$preInput.outerWidth()});
+        }
 
         if($dropdown.height() > maxHeight){
           $dropdown.height(maxHeight);
@@ -70,6 +76,11 @@
 
         if($dropdown.width() < propWidth){
           $dropdown.width(propWidth);
+        }
+
+        if($preInput.val().length > 0){
+          dropdown.find('li').removeClass('active');
+          $dropdown.find('li:contains("' + $preInput.val() + '")').addClass('active');
         }
       }
 
@@ -121,6 +132,26 @@
 
     , hover: function(e){
       $(this).toggleClass('li-hover',e.type == "mouseover");
+    }
+
+    , click: function(e){
+      var $this = $(this)
+        , $dropdown
+        , $preInput
+
+      if ($this.is('.disabled, :disabled')) return
+
+      e.preventDefault()
+      e.stopPropagation()
+
+      $dropdown = $this.parent().parent();
+      $preInput = $this.parentsUntil('.open').parent().parent().find('input');
+
+      $preInput.val($this.text());
+
+      $dropdown.find('li').removeClass('active');
+      $this.parent().addClass('active');
+      $dropdown.parent().removeClass('open');
     }
 
   }
@@ -185,5 +216,6 @@
     .on('keydown.dropdown.data-api', toggle + ', [role=menu]' , Dropdown.prototype.keydown)
     .on('mouseover.dropdown.data-api', '.dropdown li', Dropdown.prototype.hover)
     .on('mouseout.dropdown.data-api', '.dropdown li', Dropdown.prototype.hover)
+    .on('click.dropdown.data-api', '.dropdown-menu li a', Dropdown.prototype.click)
 
 }(window.jQuery);
